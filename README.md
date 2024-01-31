@@ -4,31 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Projects Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>AI Projects</h1>
-        <p>Hi, my name is Muhammad Reza and this is my Portfolio of AI Projects</p>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search projects..." onkeyup="searchProjects()">
-    </div>
+    <section id="home">
+        <h1>Welcome to My AI Projects Portfolio</h1>
+        <p>Discover my journey in Artificial Intelligence.</p>
+    </section>
 
-    <div class="project-gallery" id="projectGallery">
-        <!-- Project items will be added here -->
-    </div>
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <!-- Project cards will be added here -->
+    </section>
 
-    <form id="contactForm">
+    <section id="contact">
         <h2>Contact Me</h2>
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <textarea id="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-    </form>
+        <form>
+            <!-- Contact form elements will be added here -->
+        </form>
+    </section>
 
-    <script src="scripts.js"></script>
+    <footer>
+        <p>© 2024 AI Projects Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
