@@ -1,6 +1,3 @@
-# muhammad-reza-63.github.io
-AI Projects
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
