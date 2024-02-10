@@ -1,30 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Projects Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - AI Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div style="float: left; font-weight: bold;">Muhammad Reza</div>
-        <div style="float: right;">
-            <button class="hamburger" onclick="toggleMenu()">☰</button>
-        </div>
-        <nav id="navbar">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="home">
-        <img src="e2b9e22e-ce42-4fe1-b410-5a47ed0749c0.webp" alt="AI Projects" style="width: 100%; height: auto;">
-        <!-- Inside your <section id="home"> or where your <h1> is located -->
+  <header>
+    <nav>
+      <a href="#home" class="logo">Your Name</a>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </nav>
+  </header>
+
+  <section id="home">
+    <div class="hero-container">
+      <h1>Your Value Proposition</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus faucibus...</p> <img src="hero-image.jpg" alt="AI Illustration" class="hero-image"> <a href="#projects" class="button">Explore Projects</a> </div>
+  </section>
+
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-card">
+      <h3>Project 1 Title</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse...</p>
+      <img src="project1-image.jpg" alt="Project 1 Screenshot">
+      <a href="project1-link" class="button">View Project</a>
+    </div>
     </section>
-    <!-- Rest of the sections remain unchanged -->
-    <script src="script.js"></script>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus faucibus...</p>
+    <div class="skills-container">
+      <h3>Skills</h3>
+      <ul>
+        <li>Python</li>
+        <li>TensorFlow</li>
+        <li>Jupyter Notebooks</li>
+        </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Get in touch if you have any questions or collaboration opportunities.</p>
+    <ul class="contact-info">
+      <li><a href="mailto:youremail@example.com">Email</a></li>
+      <li><a href="https://www.yoursocialmedia.com">Social Media</a></li>
+      </ul>
+    </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
