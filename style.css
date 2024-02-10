@@ -1,37 +1,95 @@
-/* Previous styles remain unchanged */
-/* Add these new styles */
+/* Reset basic styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* Global styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+a:hover {
+  background-color: #e0e0e0;
+}
+
+/* Hamburger menu button */
 .hamburger {
-    display: inline-block;
-    cursor: pointer;
-    font-size: 24px;
-    user-select: none;
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  font-size: 24px;
+  user-select: none;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-#navbar {
-    display: none;
-    clear: both;
+.hamburger span {
+  width: 20px;
+  height: 3px;
+  background-color: currentColor;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
 }
 
+/* Responsive modifications */
 @media screen and (max-width: 600px) {
-    .hamburger {
-        display: block;
-    }
+  .hamburger {
+    display: block; /* Shown on small screens */
+  }
 
-    #navbar {
-        display: block;
-    }
+  #navbar {
+    display: none; /* Hidden by default on small screens */
+  }
 
-    #navbar ul {
-        padding: 0;
-        list-style-type: none;
-    }
+  .hamburger.active span:nth-child(1),
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(10px);
+  }
 
-    #navbar ul li a {
-        text-decoration: none;
-        display: block;
-        padding: 8px;
-        background: #f2f2f2;
-        margin: 5px;
-        color: #333;
-    }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #navbar ul {
+    padding: 10px;
+    background-color: #f2f2f2;
+  }
+
+  #navbar ul li {
+    display: block;
+  }
+
+  #navbar ul li a {
+    padding: 12px;
+  }
 }
