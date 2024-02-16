@@ -1,95 +1,157 @@
-/* Reset basic styles */
-body,
-html {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures consistent box sizing */
+    background-image: url('robot.webp');
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
 }
 
-/* Global styles */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f0f0f0;
-  padding: 10px 20px;
+header {
+    background-color: #123456; /* Adjust if needed for theme */
+    color: #ffffff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.5em;
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Added to remove default margin */
+    text-align: center;
+    display: none;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+nav ul li {
+    display: inline-block; /* Changed from inline for better spacing control */
+    margin: 0 15px;
 }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for hover effects */
 }
 
-a {
-  color: #333;
-  text-decoration: none;
-  padding: 5px 10px;
+nav ul li a:hover, nav ul li a:focus {
+    color: #ffdd00; /* Highlight color on hover/focus for better UX */
 }
 
-a:hover {
-  background-color: #e0e0e0;
-}
-
-/* Hamburger menu button */
-.hamburger {
-  display: none; /* Hidden by default */
-  cursor: pointer;
-  font-size: 24px;
-  user-select: none;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.hamburger span {
-  width: 20px;
-  height: 3px;
-  background-color: currentColor;
-  border-radius: 2px;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Responsive modifications */
-@media screen and (max-width: 600px) {
-  .hamburger {
-    display: block; /* Shown on small screens */
-  }
-
-  #navbar {
-    display: none; /* Hidden by default on small screens */
-  }
-
-  .hamburger.active span:nth-child(1),
-  .hamburger.active span:nth-child(3) {
-    transform: translateY(10px);
-  }
-
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  #navbar ul {
-    padding: 10px;
-    background-color: #f2f2f2;
-  }
-
-  #navbar ul li {
+nav ul.open {
     display: block;
-  }
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #123456;
+    border: 1px solid #ffffff;
+    border-top: none;
+    text-align: left;
+    padding: 10px;
+    width: 200px; /* Adjust width as needed */
+}
 
-  #navbar ul li a {
-    padding: 12px;
-  }
+nav ul.open li {
+    display: block;
+    margin: 0;
+}
+
+nav ul.open li a {
+    display: block;
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #123456;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Changed to relative */
+    bottom: 0;
+    width: 100%;
+}
+
+#skills ul, #recent-projects .project {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Ensure no default margin for cleaner layout */
+}
+
+#skills li {
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+#skills li:hover {
+    background-color: #e1e1e1; /* Slightly darker on hover for interaction feedback */
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    margin: 0 0 5px; /* Adjusted for spacing between title and description */
+}
+
+.project p {
+    margin: 5px 0;
+}
+
+footer div {
+    margin-top: 10px;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease; /* Consistent with nav link hover effect */
+}
+
+footer a:hover {
+    color: #ffdd00; /* Consistent hover effect with nav links */
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin-bottom: 5px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.brand-name {
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: 15px; /* Space between menu and name */
 }
